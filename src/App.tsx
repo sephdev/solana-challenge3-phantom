@@ -98,8 +98,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Connect to Phantom Wallet</h2>
-      </header>
-      {provider && !walletKey && (
+        {provider && !walletKey && (
           <button
             style={{
               fontSize: "16px",
@@ -112,6 +111,7 @@ function App() {
             Connect Wallet
           </button>
         )}
+      </header>
         {provider && walletKey && <p>Connected account</p> }
 
         {!provider && (
