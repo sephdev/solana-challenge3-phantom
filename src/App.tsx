@@ -119,6 +119,21 @@ function App() {
             <a href="https://phantom.app/">Phantom Browser extension</a>
           </p>
         )}
+          {/* Disconnect Wallet button */}
+          <button
+          style={{
+            position: "absolute",
+            top: "0",
+            right: "0",
+            fontSize: "15px",
+            padding: "10px",
+            margin: "20px",
+            fontWeight: "bold",
+            borderRadius: "5px",
+          }}
+          >
+          Disconnect Wallet
+          </button>
       </header>
     </div>
   );
