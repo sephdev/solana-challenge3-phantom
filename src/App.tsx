@@ -111,7 +111,6 @@ function App() {
             Connect Wallet
           </button>
         )}
-      </header>
         {provider && walletKey && <p>Connected account</p> }
 
         {!provider && (
@@ -120,6 +119,7 @@ function App() {
             <a href="https://phantom.app/">Phantom Browser extension</a>
           </p>
         )}
+      </header>
     </div>
   );
 }
