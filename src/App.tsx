@@ -98,7 +98,19 @@ function App() {
    * This function is called when the disconnect wallet button is clicked
    */
   const disconnectWallet = async () => {
-  
+    // @ts-ignore
+    const { solana } = window;
+
+    // checks if phantom wallet exists and connected
+    if (solana && walletKey) {
+      try {
+        // disconnects wallet and sets to undefined
+        await solana.disconnect();        
+        setWalletKey(undefined);
+      } catch (err) {
+        console.log(err);
+      }
+    }
   };
 
 	// HTML code for the app
