@@ -93,47 +93,61 @@ function App() {
     }
   };
 
+  /**
+   * @description prompts user to disconnect wallet if it's connected.
+   * This function is called when the disconnect wallet button is clicked
+   */
+  const disconnectWallet = async () => {
+  
+  };
+
 	// HTML code for the app
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Connect to Phantom Wallet</h2>
-        {provider && !walletKey && (
-          <button
-            style={{
-              fontSize: "16px",
-              padding: "15px",
-              fontWeight: "bold",
-              borderRadius: "5px",
-            }}
-            onClick={connectWallet}
-          >
-            Connect Wallet
-          </button>
+        {provider && !walletKey && ( 
+          <>
+            <h2>Connect to Phantom Wallet</h2>
+              <button
+              style={{
+                fontSize: "16px",
+                padding: "15px",
+                fontWeight: "bold",
+                borderRadius: "5px",
+              }}
+              onClick={connectWallet}
+              >
+              Connect Wallet
+              </button>
+          </>
         )}
-        {provider && walletKey && <p>Connected account</p> }
-
+        {provider && walletKey && (
+          <>
+            <p>Connected account</p>
+            {walletKey}
+            <button
+              style={{
+                fontSize: "16px",
+                padding: "15px",
+                fontWeight: "bold",
+                borderRadius: "5px",
+                position: "absolute",
+                top: "0",
+                right: "0",
+                margin: "10px",
+              }}
+              onClick={disconnectWallet}
+              >
+              Disconnect Wallet
+              </button>
+          </>
+        )}
         {!provider && (
           <p>
             No provider found. Install{" "}
             <a href="https://phantom.app/">Phantom Browser extension</a>
           </p>
         )}
-          {/* Disconnect Wallet button */}
-          <button
-          style={{
-            position: "absolute",
-            top: "0",
-            right: "0",
-            fontSize: "15px",
-            padding: "10px",
-            margin: "20px",
-            fontWeight: "bold",
-            borderRadius: "5px",
-          }}
-          >
-          Disconnect Wallet
-          </button>
       </header>
     </div>
   );
