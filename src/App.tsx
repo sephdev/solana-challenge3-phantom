@@ -101,10 +101,10 @@ function App() {
     // @ts-ignore
     const { solana } = window;
 
-    // checks if phantom wallet exists and connected
+    // checks if phantom wallet exists, connected and walletKey is set
     if (solana && walletKey) {
       try {
-        // disconnects wallet and sets to undefined
+        // disconnects wallet and sets walletKey to undefined
         await solana.disconnect();        
         setWalletKey(undefined);
       } catch (err) {
