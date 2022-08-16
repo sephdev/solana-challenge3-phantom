@@ -135,8 +135,17 @@ function App() {
         )}
         {provider && walletKey && (
           <>
-            <p>Connected account</p>
-            {walletKey}
+            <p>Connected account: <br /> 
+              <div
+                style={{
+                  border: "solid 1px",
+                  borderRadius: "15px",
+                  padding: "5px",
+                }}
+              >{walletKey.toString()}
+              </div>
+            </p>
+            
             <button
               style={{
                 fontSize: "16px",
