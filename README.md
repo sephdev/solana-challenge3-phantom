@@ -1,5 +1,5 @@
-# Metacrafters Module 2: Challenge 3 - Solana Phantom React App 
-#### (with Isabel)
+# Metacrafters Module 2: Challenge 3 - Solana Phantom Wallet React App 
+(with Isabel)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
