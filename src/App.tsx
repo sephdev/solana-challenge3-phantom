@@ -57,7 +57,7 @@ function App() {
     undefined
   );
 
-	// create state variable for the wallet key
+  // create state variable for the wallet key
   const [walletKey, setWalletKey] = useState<PhantomProvider | undefined>(
   undefined
   );
@@ -66,7 +66,7 @@ function App() {
   useEffect(() => {
 	  const provider = getProvider();
 
-		// if the phantom provider exists, set this as the provider
+    // if the phantom provider exists, set this as the provider
 	  if (provider) setProvider(provider);
 	  else setProvider(undefined);
   }, []);
@@ -82,10 +82,10 @@ function App() {
 		// checks if phantom wallet exists
     if (solana) {
       try {
-				// connects wallet and returns response which includes the wallet public key
+        // connects wallet and returns response which includes the wallet public key
         const response = await solana.connect();
         console.log('wallet account ', response.publicKey.toString());
-				// update walletKey to be the public key
+        // update walletKey to be the public key
         setWalletKey(response.publicKey.toString());
       } catch (err) {
       // { code: 4001, message: 'User rejected the request.' }
@@ -113,7 +113,7 @@ function App() {
     }
   };
 
-	// HTML code for the app
+  // HTML code for the app
   return (
     <div className="App">
       <header className="App-header">
