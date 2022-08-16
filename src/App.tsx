@@ -79,7 +79,7 @@ function App() {
     // @ts-ignore
     const { solana } = window;
 
-		// checks if phantom wallet exists
+    // checks if phantom wallet exists
     if (solana) {
       try {
         // connects wallet and returns response which includes the wallet public key
